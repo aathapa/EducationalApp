@@ -15,7 +15,11 @@ const Courses = StackNavigator({
   course: {
     screen: courses,
     navigationOptions: {
-      title: 'Courses'
+      title: 'Courses',
+      headerStyle: {
+        backgroundColor: '#fff'
+      }
+      
     }
   }
 })
@@ -24,7 +28,10 @@ const MyCourses = StackNavigator({
   myCourses: {
     screen: myCourses,
     navigationOptions: {
-      title: 'My Courses'
+      title: 'My Courses',
+      headerStyle: {
+        backgroundColor: '#fff'
+      }
     }
   }
 })
@@ -32,7 +39,10 @@ const Profile = StackNavigator({
   profile: {
     screen: profile,
     navigationOptions: {
-      title: 'Profile'
+      title: 'Profile',
+      headerStyle: {
+        backgroundColor: '#fff'
+      }
     }
   }
 })
@@ -40,7 +50,10 @@ const Messages = StackNavigator({
   messages: {
     screen: messages,
     navigationOptions: {
-      title: 'Messages'
+      title: 'Messages',
+      headerStyle: {
+        backgroundColor: '#fff'
+      }
     }
   }
 })
