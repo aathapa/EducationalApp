@@ -4,5 +4,8 @@ export default Images = {
   graphics1: require('../images/graphics1.jpg'),
   graphics2: require('../images/graphics2.jpg'),
   graphics3: require('../images/graphics3.jpg'),
-  graphics4: require('../images/graphics4.jpg')
+  graphics4: require('../images/graphics4.jpg'),
+  design1: require('../images/design1.jpg'),
+  design2: require('../images/design2.jpg'),
+  design3: require('../images/design3.jpg')
 }
