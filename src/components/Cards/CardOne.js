@@ -16,7 +16,7 @@ const CardOne = (props) => {
             style={styles.image}
           />
           <View style={{marginTop: 100}}>
-            <Text style={{color: '#ddd'}}>{props.item.title}</Text>
+            <Text style={{color: '#fff'}}>{props.item.title}</Text>
           </View>
         </View>
       </TouchableOpacity>
@@ -41,7 +41,6 @@ const styles = {
     width: 250,
     borderRadius: 4,
     position: 'absolute',
-    opacity: 0.3
   }
 }
 
