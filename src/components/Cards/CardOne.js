@@ -5,22 +5,35 @@ import {
   TouchableOpacity,
   Image
 } from 'react-native';
+import Rating from '../Rating/Rating';
 
 const CardOne = (props) => {
   return (
-    <View style={styles.cardContainer}>
-      <TouchableOpacity>
-        <View style={styles.card}>
-          <Image
-            source={props.item.image}
-            style={styles.image}
-          />
-          <View style={{marginTop: 100}}>
-            <Text style={{color: '#fff'}}>{props.item.title}</Text>
+    <View>
+      <View style={styles.cardContainer}>
+        <TouchableOpacity>
+          <View style={styles.card}>
+            <Image
+              source={props.item.image}
+              style={styles.image}
+            />
+            <View style={{ flex: 1, marginLeft: 15 }}>
+              <View style={{ flex: 1, marginTop: 10, alignItems: 'flex-end', marginRight: 10 }}>
+                <Rating rating={props.item.rating} />
+              </View>
+              <View style={{ flex: 2, justifyContent: 'flex-end' }}>
+                <Text style={styles.titleText}>{props.item.title}</Text>
+              </View>
+              <View style={{ flex: 1, marginTop: 5 }}>
+                <Text style={styles.priceText}>$ {props.item.price}</Text>
+              </View>
+            </View>
+
           </View>
-        </View>
-      </TouchableOpacity>
+        </TouchableOpacity>
+      </View>
     </View>
+    
   );
 }
 
@@ -41,6 +54,14 @@ const styles = {
     width: 250,
     borderRadius: 4,
     position: 'absolute',
+  },
+  titleText: {
+    color: '#fff',
+    fontWeight: 'bold'
+  },
+  priceText: {
+    color: '#fff',
+    fontWeight: 'bold'
   }
 }
 
