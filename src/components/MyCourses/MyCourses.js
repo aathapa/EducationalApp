@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
   View,
   Text,
+  SegmentedControlIOS
 } from 'react-native';
 
 import SegmentedControlTab from 'react-native-segmented-control-tab';
@@ -14,27 +15,21 @@ class MyCourse extends Component {
     super(props);
     this.state = {
       selectedIndex: 0,
+      selectedTab: 'Current'
     };
   }
-
-  handleIndexChange = (index) => {
-    this.setState({
-      ...this.state,
-      selectedIndex: index,
-    });
-  }
-
+  
   renderSegmentContent() {
-    switch (this.state.selectedIndex){
-      case 0:
+    switch (this.state.selectedTab){
+      case 'Current':
         return (
           <Current />
         );  
-      case 1:
+      case 'Outgoing':
         return (
           <Ongoing />
         ); 
-      case 2:
+      case 'Completed':
         return (
           <Completed />
         ); 
@@ -44,14 +39,14 @@ class MyCourse extends Component {
   render() {
     return (
       <View style={{flex: 1,backgroundColor: '#fff'}}>
-        <View style={{marginHorizontal: 16,marginTop: 10}}>
-          <SegmentedControlTab
-            values={['Current', 'Ongoing', 'Completed']}
+        <View style={{marginHorizontal: 16,marginTop: 10,flex :1}}>
+          <SegmentedControlIOS
+            values={["Current", "Outgoing", "Completed"]}
             selectedIndex={this.state.selectedIndex}
-            onTabPress={this.handleIndexChange}
+            onValueChange={(val)=> this.setState({ selectedTab: val})}
           />
         </View>
-        <View>
+        <View style={{flex: 8}}>
           {this.renderSegmentContent()}
         </View>
       </View>
