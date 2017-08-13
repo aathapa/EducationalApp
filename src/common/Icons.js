@@ -6,13 +6,15 @@ export default icons = {
       course: 'md-home',
       mycourses: 'logo-youtube',
       messages: 'md-mail',
-      profile: 'md-person'
+      profile: 'md-person',
+      download: 'md-download'
     },
     ios: {
       course: 'ios-home',
       mycourses: 'logo-youtube',
       messages: 'ios-mail',
-      profile: 'ios-person'
+      profile: 'ios-person',
+      download: 'ios-download-outline'
     }
   })
 }
