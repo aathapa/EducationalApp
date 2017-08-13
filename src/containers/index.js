@@ -4,6 +4,7 @@ import courses from './Courses/CoursesContainer';
 import myCourses from './MyCourses/MyCoursesContainer';
 import profile from './Profile/ProfileContainer';
 import messages from './Messages/MessageContainer';
+import trialCourses from './TrialCourses/TrialCoursesContainer';
 
 export {
   loginContainer,
@@ -11,5 +12,6 @@ export {
   profile,
   messages,
   courses,
-  myCourses
+  myCourses,
+  trialCourses
 }
