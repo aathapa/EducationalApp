@@ -6,7 +6,8 @@ import {
   profile,
   messages,
   myCourses,
-  courses
+  courses,
+  trialCourses
 } from './containers';
 import IonIcons from 'react-native-vector-icons/Ionicons';
 import { Icons } from './common';
@@ -85,9 +86,23 @@ const Tabs = TabNavigator({
   }
 })
 
+const TrailCourse = StackNavigator({
+  TrailCourse: {
+    screen: trialCourses,
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: '#fff'
+      }
+    }
+  }
+})
+
 const AppRouter = StackNavigator({
   Tabs: {
     screen: Tabs
+  },
+  TrialCourses: {
+    screen: TrailCourse
   }
 },
   {
