@@ -3,7 +3,8 @@ import {
   View,
   Text,
   TouchableOpacity,
-  Image
+  Image,
+  Platform
 } from 'react-native';
 import { Colors } from '../../common';
 import Rating from '../Rating/Rating';
@@ -51,13 +52,23 @@ const styles = {
     paddingBottom: 20
   },
   card: {
+    ...Platform.select({
+      ios: {
+        shadowColor: '#000',
+        shadowOffset: { width: 2, height: 1 },
+        shadowOpacity: 0.2,
+        
+      },
+      android: {
+      }
+    }),
+    borderColor: '#ddd',
+    borderWidth: 1,
     height: 180,
     width: 130,
     borderRadius: 4,
-    shadowColor: '#000',
-    shadowOffset: { width: 2, height: 1 },
-    shadowOpacity: 0.2,
-    borderColor: '#ddd'
+    
+    
   },
   image: {
     height: 100,
