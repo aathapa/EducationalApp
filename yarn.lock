@@ -3303,12 +3303,6 @@ react-native-progress@^3.3.0:
   dependencies:
     prop-types "^15.5.8"
 
-react-native-segmented-control-tab@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/react-native-segmented-control-tab/-/react-native-segmented-control-tab-3.2.1.tgz#29dc3700c3d954e5bdb5dd5cc48f4c4143a9375e"
-  dependencies:
-    prop-types "^15.5.10"
-
 react-native-tab-view@^0.0.65:
   version "0.0.65"
   resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-0.0.65.tgz#b685ea3081ff7c96486cd997361026c407302c59"
