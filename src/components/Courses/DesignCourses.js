@@ -13,22 +13,22 @@ class PopularCourses extends Component {
     super(props);
   }
 
-  renderCard(item, index) {
+  renderCard(item, index, navigate) {
     return (
-      <CardTwo item={item} />
+      <CardTwo item={item} navigate={navigate} />
     )
 
   }
 
   render() {
-    const { data } = this.props;
+    const { data,navigate } = this.props;
     return (
       <View>
         <FlatList
           data={data}
           showsHorizontalScrollIndicator={false}
           horizontal
-          renderItem={({ item, index }) => this.renderCard(item, index)}
+          renderItem={({ item, index }) => this.renderCard(item, index, navigate)}
           keyExtractor={(item, index) => index}
         />
       </View>

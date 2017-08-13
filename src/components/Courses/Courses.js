@@ -18,6 +18,7 @@ class Course extends Component {
     super(props);
   }
   render() {
+    const { navigate } = this.props.navigation
     return (
       <View style={{ backgroundColor: '#fff', flex: 1 }}>
         <ScrollView>
@@ -25,6 +26,7 @@ class Course extends Component {
             <CardContentInfo category="Popular" />
             <View style={{ marginTop: 10 }} >
               <PopularCourses
+                navigate={navigate}  
                 data={PopularData}
               />
             </View>
@@ -32,13 +34,13 @@ class Course extends Component {
           <View>
             <CardContentInfo category="Design" />
             <View style={{ marginTop: 10 }}>
-              <DesignCourses data={Designdata} />
+              <DesignCourses navigate={navigate} data={Designdata} />
             </View>
           </View>
           <View >
             <CardContentInfo category="Marketing" />
             <View style={{ marginTop: 10 }}>
-              <DesignCourses data={Designdata} />
+              <DesignCourses navigate={navigate} data={Designdata} />
             </View>
           </View>
         </ScrollView>

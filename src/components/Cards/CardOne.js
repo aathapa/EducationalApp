@@ -11,7 +11,7 @@ const CardOne = (props) => {
   return (
     <View>
       <View style={styles.cardContainer}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=> props.navigate('TrialCourses')}>
           <View style={styles.card}>
             <Image
               source={props.item.image}

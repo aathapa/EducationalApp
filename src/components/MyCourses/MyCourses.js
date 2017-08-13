@@ -4,8 +4,6 @@ import {
   Text,
   SegmentedControlIOS
 } from 'react-native';
-
-import SegmentedControlTab from 'react-native-segmented-control-tab';
 import Current from './Current';
 import Ongoing from './Ongoing';
 import Completed from './Completed';

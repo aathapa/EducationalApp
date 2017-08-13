@@ -10,8 +10,9 @@ class MyCourseContainer extends Component {
     super(props);
   }
   render() {
+
     return (
-      <MyCourse />
+      <MyCourse navigation={this.props.navigation} />
     );
   }
 }

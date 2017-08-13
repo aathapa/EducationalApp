@@ -13,7 +13,13 @@ const CardTwo = (props) => {
   return (
     <View>
       <View style={styles.cardContainer}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() =>
+          props.navigate('TrialCourses', {
+            title: props.item.title,
+            
+          })
+        }
+        >
           <View style={styles.card}>
             <View style={{flex: 1}}>
               <View style={{flex :1}}>

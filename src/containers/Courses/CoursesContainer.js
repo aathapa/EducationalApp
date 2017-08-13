@@ -11,7 +11,7 @@ class CourseContainer extends Component {
   }
   render() {
     return (
-      <Course />
+      <Course navigation={this.props.navigation} />
     );
   }
 }
