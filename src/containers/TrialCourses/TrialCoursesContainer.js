@@ -11,7 +11,7 @@ class TrialCoursesContainer extends Component {
   }
   render() {
     return (
-      <TrialCourses />
+      <TrialCourses navigation={this.props.navigation} />
     );
   }
 }
