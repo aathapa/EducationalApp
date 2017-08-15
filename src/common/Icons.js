@@ -8,7 +8,8 @@ export default icons = {
       messages: 'md-mail',
       profile: 'md-person',
       download: 'md-download',
-      back: 'md-arrow-back'
+      back: 'md-arrow-back',
+      forward: 'md-arrow-forward'
     },
     ios: {
       course: 'ios-home',
@@ -16,7 +17,8 @@ export default icons = {
       messages: 'ios-mail',
       profile: 'ios-person',
       download: 'ios-download-outline',
-      back: 'ios-arrow-round-back'
+      back: 'ios-arrow-round-back',
+      forward: 'ios-arrow-round-forward'
     }
   })
 }
