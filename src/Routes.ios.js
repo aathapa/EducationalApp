@@ -1,8 +1,8 @@
 import React from 'react';
-import { 
+import {
   TouchableOpacity
- } from 'react-native'
-import { StackNavigator, TabNavigator,NavigationActions } from 'react-navigation';
+} from 'react-native'
+import { StackNavigator, TabNavigator, NavigationActions } from 'react-navigation';
 import {
   loginContainer,
   signupContainer,
@@ -11,7 +11,8 @@ import {
   myCourses,
   courses,
   trialCourses,
-  welcomeScreen
+  welcomeScreen,
+  buyCoursesContainer
 } from './containers';
 import IonIcons from 'react-native-vector-icons/Ionicons';
 import { Icons } from './common';
@@ -24,7 +25,7 @@ const Courses = StackNavigator({
       headerStyle: {
         backgroundColor: '#fff'
       }
-      
+
     }
   }
 })
@@ -103,26 +104,43 @@ const TrailCourse = StackNavigator({
         backgroundColor: '#fff'
       },
       headerLeft:
-      <TouchableOpacity style={{marginLeft: 15}} onPress={() => navigation.dispatch(backAction) }>
+      <TouchableOpacity style={{ marginLeft: 15 }} onPress={() => navigation.dispatch(backAction)}>
         <IonIcons name={Icons.back} size={35} color='#000' />
       </TouchableOpacity>
-        
+
+    })
+  }
+})
+
+const BuyCourses = StackNavigator({
+  BuyCourses: {
+    screen: buyCoursesContainer,
+    navigationOptions: ({ navigation }) => ({
+      title: `${navigation.state.params.title}`,
+      headerStyle: {
+        backgroundColor: '#fff'
+      },
+      headerLeft:
+      <TouchableOpacity style={{ marginLeft: 15 }} onPress={() => navigation.dispatch(backAction)}>
+        <IonIcons name={Icons.back} size={35} color='#000' />
+      </TouchableOpacity>
     })
   }
 })
 
 const AppRouter = StackNavigator({
-  WelcomeScreen: {
-    screen: welcomeScreen
-  },
+
   Tabs: {
     screen: Tabs
   },
   TrialCourses: {
     screen: TrailCourse
-  }
+  },
+  WelcomeScreen: {
+    screen: welcomeScreen
+  },
 },
   {
-  headerMode: 'none'
-})
+    headerMode: 'none'
+  })
 export default AppRouter;
