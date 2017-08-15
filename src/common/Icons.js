@@ -7,14 +7,16 @@ export default icons = {
       mycourses: 'logo-youtube',
       messages: 'md-mail',
       profile: 'md-person',
-      download: 'md-download'
+      download: 'md-download',
+      back: 'md-arrow-back'
     },
     ios: {
       course: 'ios-home',
       mycourses: 'logo-youtube',
       messages: 'ios-mail',
       profile: 'ios-person',
-      download: 'ios-download-outline'
+      download: 'ios-download-outline',
+      back: 'ios-arrow-round-back'
     }
   })
 }
