@@ -6,6 +6,7 @@ import profile from './Profile/ProfileContainer';
 import messages from './Messages/MessageContainer';
 import trialCourses from './TrialCourses/TrialCoursesContainer';
 import welcomeScreen from './WelcomeScreen/WelcomeScreen';
+import buyCoursesContainer from './BuyCourses/BuyCoursesContainer';
 
 export {
   loginContainer,
@@ -15,5 +16,6 @@ export {
   courses,
   myCourses,
   trialCourses,
-  welcomeScreen
+  welcomeScreen,
+  buyCoursesContainer
 }
