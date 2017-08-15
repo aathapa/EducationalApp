@@ -1,5 +1,8 @@
-import React from 'react'
-import { StackNavigator, TabNavigator } from 'react-navigation';
+import React from 'react';
+import { 
+  TouchableOpacity
+ } from 'react-native'
+import { StackNavigator, TabNavigator,NavigationActions } from 'react-navigation';
 import {
   loginContainer,
   signupContainer,
@@ -7,7 +10,8 @@ import {
   messages,
   myCourses,
   courses,
-  trialCourses
+  trialCourses,
+  welcomeScreen
 } from './containers';
 import IonIcons from 'react-native-vector-icons/Ionicons';
 import { Icons } from './common';
@@ -86,18 +90,31 @@ const Tabs = TabNavigator({
   }
 })
 
+const backAction = NavigationActions.back({
+  key: ''
+})
+
 const TrailCourse = StackNavigator({
   TrailCourse: {
     screen: trialCourses,
-    navigationOptions: {
+    navigationOptions: ({ navigation }) => ({
+      title: `${navigation.state.params.title}`,
       headerStyle: {
         backgroundColor: '#fff'
-      }
-    }
+      },
+      headerLeft:
+      <TouchableOpacity style={{marginLeft: 15}} onPress={() => navigation.dispatch(backAction) }>
+        <IonIcons name={Icons.back} size={35} color='#000' />
+      </TouchableOpacity>
+        
+    })
   }
 })
 
 const AppRouter = StackNavigator({
+  WelcomeScreen: {
+    screen: welcomeScreen
+  },
   Tabs: {
     screen: Tabs
   },
