@@ -16,7 +16,11 @@ const CardTwo = (props) => {
         <TouchableOpacity onPress={() =>
           props.navigate('TrialCourses', {
             title: props.item.title,
-            
+            price: props.item.price,
+            currentStudent: props.item.currentStudent,
+            totalStudent: props.item.totalStudent,
+            name: props.item.name,
+            image: props.item.image
           })
         }
         >
