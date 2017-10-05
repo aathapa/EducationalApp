@@ -7,5 +7,7 @@ export default Images = {
   graphics4: require('../images/graphics4.jpg'),
   design1: require('../images/design1.jpg'),
   design2: require('../images/design2.jpg'),
-  design3: require('../images/design3.jpg')
+  design3: require('../images/design3.jpg'),
+  trialCourse: require('../images/trialcourse.png'),
+  buyCourse: require('../images/buyCourse.png'),
 }

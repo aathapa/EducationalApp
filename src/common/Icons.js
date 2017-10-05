@@ -9,7 +9,8 @@ export default icons = {
       profile: 'md-person',
       download: 'md-download',
       back: 'md-arrow-back',
-      forward: 'md-arrow-forward'
+      forward: 'md-arrow-forward',
+      menu: 'md-menu'
     },
     ios: {
       course: 'ios-home',
@@ -18,7 +19,8 @@ export default icons = {
       profile: 'ios-person',
       download: 'ios-download-outline',
       back: 'ios-arrow-round-back',
-      forward: 'ios-arrow-round-forward'
+      forward: 'ios-arrow-round-forward',
+      menu: 'ios-menu'
     }
   })
 }
