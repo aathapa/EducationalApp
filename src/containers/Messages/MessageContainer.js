@@ -10,8 +10,9 @@ class MessageContainer extends Component {
     super(props);
   }
   render() {
+
     return (
-      <Message />
+      <Message navigation={this.props.navigation} />
     );
   }
 }

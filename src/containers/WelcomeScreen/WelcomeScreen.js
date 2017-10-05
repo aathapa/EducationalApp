@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import {
   View,
-  Text
+  Text,
+  Platform
 } from 'react-native';
 import * as Progress from 'react-native-progress'
 import { Colors } from '../../common';
@@ -22,30 +23,59 @@ export default class WelcomeScreen extends Component {
   
 
   renderProgress() {
-    const resetActions = NavigationActions.reset({
-      index: 0,
-      actions: [
-        NavigationActions.navigate({ routeName: 'Tabs' })
-      ]
-    })
+    let resetActions;
+    if (Platform.OS === 'ios') {
+      const resetActions = NavigationActions.reset({
+        index: 0,
+        actions: [
+          NavigationActions.navigate({ routeName: 'Tabs' })
+        ]
+      })
+      let progress = 0;
+      this.setState({ progress });
+      setTimeout(() => {
+        this.setState({ indeterminate: false });
+        const x = setInterval(() => {
+          progress += Math.random() / 5;
+          if (progress > 1) {
+            progress = 1;
+            clearInterval(x);
+            this.setState({ progress });
+            setTimeout(() => this.props.navigation.dispatch(resetActions), 150)
+          }
+          else {
+            this.setState({ progress });
+          }
+        }, 200);
+      }, 600);
+    }
+    else if(Platform.OS === 'android') {
+      const resetActions = NavigationActions.reset({
+        index: 0,
+        actions: [
+          NavigationActions.navigate({ routeName: 'Drawer' })
+        ]
+      })
+      let progress = 0;
+      this.setState({ progress });
+      setTimeout(() => {
+        this.setState({ indeterminate: false });
+        const x = setInterval(() => {
+          progress += Math.random() / 5;
+          if (progress > 1) {
+            progress = 1;
+            clearInterval(x);
+            this.setState({ progress });
+            setTimeout(() => this.props.navigation.dispatch(resetActions), 150)
+          }
+          else {
+            this.setState({ progress });
+          }
+        }, 200);
+      }, 600);
+    }
 
-    let progress = 0;
-    this.setState({ progress });
-    setTimeout(() => {
-      this.setState({ indeterminate: false });
-      const x = setInterval(() => {
-        progress += Math.random() / 5;
-        if (progress > 1) {
-          progress = 1;
-          clearInterval(x);
-          this.setState({ progress });
-          setTimeout(() => this.props.navigation.dispatch(resetActions), 150)
-        }
-        else {
-          this.setState({ progress });
-        }
-      }, 200);
-    }, 600);
+   
   }
 
   render() {

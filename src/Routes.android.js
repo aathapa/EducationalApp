@@ -6,7 +6,10 @@ import {
   courses,
   myCourses,
   messages,
-  profile
+  profile,
+  trialCourses,
+  buyCoursesContainer,
+  welcomeScreen
 } from './containers';  
 
 const Drawer = DrawerNavigator({
@@ -25,9 +28,19 @@ const Drawer = DrawerNavigator({
 })
 
 const AppRouter = StackNavigator({
+  
   Drawer: {
     screen: Drawer
-  }
+  },
+  TrialCourses: {
+    screen: trialCourses
+  },
+  BuyCourses: {
+    screen: buyCoursesContainer
+  },
+  Welcome: {
+    screen: welcomeScreen
+  },
 },
   {
   headerMode: 'none'

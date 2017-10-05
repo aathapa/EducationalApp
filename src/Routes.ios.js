@@ -136,6 +136,9 @@ const AppRouter = StackNavigator({
   TrialCourses: {
     screen: TrailCourse
   },
+  BuyCourses: {
+    screen: BuyCourses
+  },
   WelcomeScreen: {
     screen: welcomeScreen
   },

@@ -11,7 +11,7 @@ class ProfileContainer extends Component {
   }
   render() {
     return (
-      <Profile />
+      <Profile navigation={this.props.navigation}/>
     );
   }
 }
