@@ -7,6 +7,7 @@ import {
 import Current from './Current';
 import Ongoing from './Ongoing';
 import Completed from './Completed';
+import NavBar from '../NavBar/Navbar'
 
 class MyCourse extends Component {
   constructor(props) {
@@ -35,8 +36,13 @@ class MyCourse extends Component {
   }
 
   render() {
+    const { navigate } = this.props.navigation;
     return (
-      <View style={{flex: 1,backgroundColor: '#fff'}}>
+      <View style={{ flex: 1, backgroundColor: '#fff' }}>
+        <NavBar
+          title="My Courses"
+          openDrawer={() => navigate('DrawerOpen')}
+        />
         <View style={{marginHorizontal: 16,marginTop: 10,flex :1}}>
           <SegmentedControlIOS
             values={["Current", "Outgoing", "Completed"]}

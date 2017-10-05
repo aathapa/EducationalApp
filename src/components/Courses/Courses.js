@@ -12,7 +12,7 @@ import Designdata from '../../Data/DesignData';
 import PopularCourses from './PopularCourses';
 import DesignCourses from './DesignCourses';
 import CardContentInfo from '../CardContentInfo/CardContentInfo';
-
+import NavBar from '../NavBar/Navbar';
 class Course extends Component {
   constructor(props) {
     super(props);
@@ -21,6 +21,10 @@ class Course extends Component {
     const { navigate } = this.props.navigation
     return (
       <View style={{ backgroundColor: '#fff', flex: 1 }}>
+        <NavBar
+          title="Courses"
+          openDrawer={() => navigate('DrawerOpen')}
+        />
         <ScrollView>
           <View>
             <CardContentInfo category="Popular" />

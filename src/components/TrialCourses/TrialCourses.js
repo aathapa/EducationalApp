@@ -10,6 +10,7 @@ import IonIcons from 'react-native-vector-icons/Ionicons'
 import StarRating from 'react-native-star-rating';
 import { Colors,Icons } from '../../common';
 import * as Progress from 'react-native-progress';
+import NavBar from '../NavBar/Navbar';
 
 const { height,width } = Dimensions.get('window')
 
@@ -22,9 +23,14 @@ class TrialCourses extends Component {
   }
 
   render() {
-    const { state } = this.props.navigation;
+    const { state,goBack } = this.props.navigation;
     return (
-      <View style={{flex: 1,backgroundColor: '#fff'}}>
+      <View style={{ flex: 1, backgroundColor: '#fff' }}>
+        <NavBar
+          title={state.params.name}
+          type="backPage"
+          back={() => goBack()}
+        />
         <View style={{backgroundColor: 'transparent',flex: 0.4}}> 
           <Image
             source={state.params.image}

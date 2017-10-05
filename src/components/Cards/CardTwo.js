@@ -12,7 +12,7 @@ import Rating from '../Rating/Rating';
 const CardTwo = (props) => {
   return (
     <View>
-      <View style={styles.cardContainer}>
+      <View style={[styles.cardContainer,props.style]}>
         <TouchableOpacity onPress={() =>
           props.navigate('TrialCourses', {
             title: props.item.title,
@@ -75,7 +75,7 @@ const styles = {
     borderColor: '#ddd',
     borderWidth: 1,
     height: 180,
-    width: 130,
+    width: 132,
     borderRadius: 4,
     
     

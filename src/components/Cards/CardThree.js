@@ -25,7 +25,6 @@ class CardThree extends Component {
   }
 
   renderCourseInfo(item) {
-    console.log(this.props);
     if (this.props.current) {
       return (
         <View>
