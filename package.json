@@ -7,7 +7,7 @@
     "test": "jest"
 	},
 	"dependencies": {
-		"firebase": "^4.2.0",
+		"firebase": "^4.13.1",
 		"react": "16.0.0-alpha.12",
 		"react-native": "0.47.1",
 		"react-native-progress": "^3.3.0",
